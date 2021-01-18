@@ -15,7 +15,7 @@ namespace Mobiles_accounting
 {
     class ViewModel : BaseVM
     {
-        public static string ConnectionInfo = "server = localhost;port = 3306;username=root;password=tamara23;database=mobiles accounting";
+        public static string ConnectionInfo = "server = localhost;port = 3306;username=root;password=password;database=mobiles accounting";
 
         private List<string> QueriesToBeExecuted = new List<string>();
 
