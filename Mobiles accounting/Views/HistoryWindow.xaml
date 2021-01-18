@@ -1,0 +1,19 @@
+﻿<Window x:Class="Mobiles_accounting.Views.HistoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mobiles_accounting.Views"
+        mc:Ignorable="d"
+        Title="История" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Mobiles accounting;component/Icons/History.png">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" Height="399" AutoGenerateColumns="False" IsReadOnly="True" ColumnWidth="Auto" VerticalAlignment="Top" Width="772" Margin="10,10,0,0" ItemsSource="{Binding History}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер входа" MinWidth="20" SortDirection="Descending" Binding="{Binding EntranceNum}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Номер действия" MinWidth="20" Binding="{Binding ActionID}"/>
+                <DataGridTextColumn Header="Дата действия" MinWidth="100" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Действие" MinWidth="150" Binding="{Binding Action}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
