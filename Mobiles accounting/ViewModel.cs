@@ -267,7 +267,7 @@ namespace Mobiles_accounting
                           Checks.Insert(Checks.Count, check);
                           QueriesToBeExecuted.Add(
                               "INSERT INTO check VALUES " +
-                              $"({check.ID}, " +
+                              $"('{check.ID}', " +
                               $"'{check.UserName}', " +
                               $"'{check.Date:yyyy-MM-dd H:mm:ss}', " +
                               $"'{check.Program.ID}')");
@@ -343,7 +343,7 @@ namespace Mobiles_accounting
                               $"SET `Name` = '{program.Name}', " +
                               $"`Developer ID` = {program.Developer.ID} " +
                               $"Where `ID` = {program.ID}");
-                          NewHistoryNote($"Программа '{oldProgram.ID}. {oldProgram.Name}' заменена на '{program.ID}. {program.Name}'");
+                          NewHistoryNote($"Программа {oldProgram.ID}. {oldProgram.Name} заменена на {program.ID}. {program.Name}");
                       }
                       else
                           MessageBox.Show("Неправильные данные");
